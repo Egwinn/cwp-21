@@ -45,7 +45,7 @@ class CrudService {
     async create(data) {
         const item = await this.repository.create(data);
 
-        return item;
+        return item.get({ plain: true });
     }
 
     async update(id, data) {
