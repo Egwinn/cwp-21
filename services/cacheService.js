@@ -5,7 +5,7 @@ class CacheService {
     constructor() {
         this.cache = LRU({
             max: 5,
-            maxAge: 1000 * 5
+            maxAge: 30000
         })
     }
 
