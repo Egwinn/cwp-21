@@ -38,7 +38,6 @@ class AgentsService extends CrudService {
                 },
             }
         );
-
         super.delete(id);
     }
 

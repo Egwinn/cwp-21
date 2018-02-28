@@ -26,10 +26,6 @@ class PropertiesService extends CrudService {
         return super.update(data.id, data);
     }
 
-    async removeAgent(propId) {
-        return super.update(propId, {agentId: null});
-    }
-
     async bindAgent(propertyId, agentId) {
         const agent = await this.agentsRepository.findById(agentId);
         

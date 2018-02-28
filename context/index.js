@@ -19,7 +19,7 @@ module.exports = (Sequelize, config) => {
     const Properties = require('../models/properties')(Sequelize, sequelize);
 
     Agents.hasMany(Properties, {foreignKey: 'agentId'});
-    Property.belongsTo(Agents, {constraints: false, foreignKey: 'agentId'});
+    Properties.belongsTo(Agents, {constraints: false, foreignKey: 'agentId'});
 
     Offices.hasMany(Agents, {foreignKey: 'officeId'});
     Agents.belongsTo(Offices, {constraints: false, foreignKey: 'officeId'});

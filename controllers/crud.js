@@ -30,7 +30,7 @@ class CrudController {
     }
 
     async read(req, res) {
-        let data = await this.service.read(req.params.id);
+        let data = await this.service.readById(req.params.id);
         this.cache.set(req, data);
         res.json(data);
     }
